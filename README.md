@@ -1,18 +1,19 @@
-# Terraform-Azure-OpenVPN
+# Terraform-AWS-OpenVPN
 
-## OpenVPN on Azure using Terraform
+## OpenVPN on AWS using Terraform
 
 ### How to build
 
-A terraform version of >0.13 is required.
+A terraform version of >0.13 and AWS CLI is required
+Configure aws-cli with your subscription details before continuing.
 
 1. Clone the repo
   ```
-  $ git clone https://github.com/Fyrepit/Terraform-Azure-OpenVPN.git
-  $ cd Terraform-Azure-OpenVPN.git
+  $ git clone https://github.com/ModelChief30/Terraform-AWS-OpenVPN.git
+  $ cd Terraform-AWS-OpenVPN.git
   ```
 
-2. Update **terraform.tfvars** with the inputs (if required).
+2. Update **terraform.tfvars** with the SSH key filepath (if required).
 
 3. Initialize Terraform. This will also download the latest terraform oci provider.
 
@@ -75,12 +76,12 @@ Check if the client VPN file is create. This file can be downloaded to test the 
 
 ### Create additional clients
 
-For creating additonal client, login to the VM as root and execute the openvpn-install.sh script under /home/ubuntu 
+You will need to create an additional client after installation is completed. To do this, login to the VM as root and execute the openvpn-install.sh script under /home/ubuntu 
 
   ```
   Login as root
     
-    ssh ubunut@<IP of VM>
+    ssh ubuntu@<IP of VM>
     ubuntu@ovpn-vm:/home$ sudo -s
     
     root@ovpn-vm:~# bash openvpn-install.sh
