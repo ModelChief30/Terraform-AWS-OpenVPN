@@ -4,7 +4,8 @@
 
 ### How to build
 
-A terraform version of >0.13 and AWS CLI is required
+A terraform version of >0.13 and AWS CLI is required.
+
 Configure aws-cli with your subscription details before continuing.
 
 1. Clone the repo
